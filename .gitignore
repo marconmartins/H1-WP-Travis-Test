@@ -1,0 +1,57 @@
+# WordPress
+web/wp
+web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Internal
+INSTALL.sh
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/h1-*
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
+
+### OS generated files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+### VIDEOS ###
+*.mp4
+*.mov
+
+### Sass ###
+# Ignore sass-cache files
+*.sass-cache*
+
+### SublimeText ###
+# SublimeText project files
+*.sublime-workspace
