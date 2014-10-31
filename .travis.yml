@@ -21,6 +21,8 @@ branches:
 before_install:
   - composer install
 
+script: build.sh
+
 env:
   global:
     - secure: "fHEA0Vzh67TcJvYfRVx+v8huCRxqi+fUHfpzH56fh8md1ydKBPML1tcawL70/GyxjzJskbJ8ZeTymT2LzksOtoMLeYsyvduDxHYaKIpt8roliG06mtsZvx8Eyg5hGxieEuWAxNyZCXTfauv8mBcYS2+EqRdewfiq8yO5EAqycos="
