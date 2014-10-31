@@ -1,0 +1,34 @@
+language: php
+php:
+  - "5.5"
+  - "5.4"
+  - "5.3"
+  - "5.2"
+
+git:
+  submodules: false
+
+
+# blacklist
+#branches:
+#  except:
+#    - legacy
+#    - experimental
+
+# whitelist
+branches:
+  only:
+    - master
+#    - stable
+
+before_install:
+  - composer install
+
+env:
+  global:
+    - secure: "fHEA0Vzh67TcJvYfRVx+v8huCRxqi+fUHfpzH56fh8md1ydKBPML1tcawL70/GyxjzJskbJ8ZeTymT2LzksOtoMLeYsyvduDxHYaKIpt8roliG06mtsZvx8Eyg5hGxieEuWAxNyZCXTfauv8mBcYS2+EqRdewfiq8yO5EAqycos="
+    - secure: "GXVJhq1fAK5Y5hbuVSZ8TJE/zNElqV2U/Vp1MOwsimluFYvJ7UvqAa6Jqm5g0xZ/NCiweLSMEEidqWj1Kpp7RewLGlxue9z975b6S6bLwxO7jCKvDQiAjHIZJ1v15uulM/65i7UxKdpjOINwx/eGSqmSuG9Z02M+oArLMYyU4m0="
+    - secure: "Um3v/UtAujkT7GkieuqEyAf2P+BDw85V8CJLpdAAHocPamyH+8e/ou60LVE6yTIV5js8DRA9aTLEKF8elYj0syxABQEDTQyHolgiIFGALUwfY4V21AVHwxfX5bq+Qb2u4NjevS08XUAKP3BbQtw3Ay45iIAjQ2zgTtM2VaFkcJ4="
+
+after_success:
+    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD $FTP_ADDRESS"
