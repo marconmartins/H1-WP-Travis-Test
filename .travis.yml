@@ -33,4 +33,4 @@ env:
     - secure: "Um3v/UtAujkT7GkieuqEyAf2P+BDw85V8CJLpdAAHocPamyH+8e/ou60LVE6yTIV5js8DRA9aTLEKF8elYj0syxABQEDTQyHolgiIFGALUwfY4V21AVHwxfX5bq+Qb2u4NjevS08XUAKP3BbQtw3Ay45iIAjQ2zgTtM2VaFkcJ4="
 
 after_success:
-    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD $FTP_ADDRESS"
+#    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD $FTP_ADDRESS"
